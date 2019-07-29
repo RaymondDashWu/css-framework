@@ -1,23 +1,131 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
+  margin-bottom: 1vh;
+  color: #323031;
+  background-color: #fdfdfd;
 }
 
 h1 {
-  font-family: 'Abril Fatface', cursive;
-  font-size: 30px;
+  font-family: "Abril Fatface", cursive;
+  font-size: 45px;
+  margin-bottom: 1vh;
+  color: #323031;
+  margin-bottom: 2vh;
 }
 
-h1 {
-  font-family: 'Abril Fatface', cursive;
+h2 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 40px;
+  margin-bottom: 1vh;
+  color: #323031;
+}
+
+h3 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 35px;
+  margin-bottom: 1vh;
+  color: #323031;
+}
+
+h4 {
+  font-family: "Abril Fatface", cursive;
   font-size: 30px;
+  margin-bottom: 1vh;
+  color: #323031;
+}
+
+h5 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 25px;
+  margin-bottom: 1vh;
+  color: #323031;
+}
+
+h6 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 20px;
+  margin-bottom: 1vh;
+  color: #323031;
+}
+
+strong, b {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 1vh;
+  color: #323031;
+  -webkit-text-stroke: 0.5px #323031;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 1vh;
+  color: #323031;
+}
+
+.checkbox label:after,
+.radio label:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  border-radius: 0.25em;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: 0.5em;
+}
+
+.radio .cr {
+  border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+  position: absolute;
+  font-size: 0.8em;
+  line-height: 0;
+  top: 50%;
+  left: 20%;
+}
+
+.radio .cr .cr-icon {
+  margin-left: 0.04em;
+}
+
+.checkbox label input[type=checkbox],
+.radio label input[type=radio] {
+  display: none;
+}
+
+.checkbox label input[type=checkbox] + .cr > .cr-icon,
+.radio label input[type=radio] + .cr > .cr-icon {
+  transform: scale(3) rotateZ(-20deg);
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.checkbox label input[type=checkbox]:checked + .cr > .cr-icon,
+.radio label input[type=radio]:checked + .cr > .cr-icon {
+  transform: scale(1) rotateZ(0deg);
+  opacity: 1;
+}
+
+.checkbox label input[type=checkbox]:disabled + .cr,
+.radio label input[type=radio]:disabled + .cr {
+  opacity: 0.5;
 }
 
 .color-grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .color-grid > div {
@@ -25,15 +133,15 @@ h1 {
 }
 
 .color-grid > div:nth-child(1) {
-  background-color: #f38181;
+  background-color: #DC3F3E;
 }
 
 .color-grid > div:nth-child(2) {
-  background-color: #fce38a;
+  background-color: #E7C643;
 }
 
 .color-grid > div:nth-child(3) {
-  background-color: #eaffd0;
+  background-color: #53C16E;
 }
 
 .color-grid > div:nth-child(4) {
@@ -41,7 +149,7 @@ h1 {
 }
 
 .color-grid > div:nth-child(5) {
-  background-color: #f4f4f4;
+  background-color: #fdfdfd;
 }
 
 .color-grid > div:nth-child(6) {
@@ -50,6 +158,10 @@ h1 {
 
 .color-grid > div:nth-child(7) {
   background-color: #AEAEA5;
+}
+
+.color-grid > div:nth-child(8) {
+  background-color: #323031;
 }
 
 .container {
@@ -63,4 +175,30 @@ section {
   margin-bottom: 1em;
   margin-top: 1em;
 }
+
+label {
+  display: block;
+  margin: 0 0 1em 0;
+}
+
+button {
+  --weight: normal;
+  /* Give the button a finger cursor */
+  cursor: pointer;
+  /* Style the button */
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0.5em;
+  padding: 0.7em 1em;
+  /* Use padding to give the text some space */
+  font-size: 1em;
+  /* Think about adding a transition */
+  transition: 200ms;
+  /* Use some variables to control the appearance */
+  font-weight: var(--weight);
+  background-color: var(--background-color, var(--color-primary));
+  color: var(--color-light);
+}
+
 /*# sourceMappingURL=style.css.map */

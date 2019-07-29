@@ -1,13 +1,20 @@
-$red: #f38181;
-$yellow: #fce38a;
-$green: #eaffd0;
+// This stores all the variables that will be used in stylesheets
+
+// Basic color palette
+$red: #DC3F3E;
+$yellow: #E7C643;
+$green: #53C16E;
 $teal: #95e1d3;
 
-
-$color-bg: #f4f4f4;
+// Background color palette
+$color-bg: #fdfdfd;
 $color-bg-md: #c4cacf;
 $color-bg-md2: #AEAEA5;
 
 $color-primary: $teal;
 $color-secondary: $green;
-$text-color: #0f0f0f;
+
+// Text 
+$text-family-primary: 'Abril Fatface', cursive;;
+$text-family-secondary: 'Open Sans', sans-serif;;
+$text-color: #323031;

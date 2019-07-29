@@ -1,0 +1,67 @@
+// This is for changing anything text related
+
+// Allows flexibility to choose font size and modifier to size.
+// In this case all fonts will be 15px + modifier
+@mixin text-styling($font, $size, $color) {
+    font-family: $font;
+    font-size: 15px + $size;
+    margin-bottom: 1vh;
+    color: $color;
+}
+
+* {
+    @include text-styling($text-family-secondary, 0, $text-color);
+    background-color: $color-bg;
+}
+
+h1 {
+    @include text-styling($text-family-primary, 30, $text-color);
+    margin-bottom: 2vh;
+}
+
+h2 {
+    @include text-styling($text-family-primary, 25, $text-color);
+}
+
+h3 {
+    @include text-styling($text-family-primary, 20, $text-color);
+}
+
+h4 {
+    @include text-styling($text-family-primary, 15, $text-color);
+}
+
+h5 {
+    @include text-styling($text-family-primary, 10, $text-color);
+}
+
+h6 {
+    @include text-styling($text-family-primary, 5, $text-color);
+}
+
+strong, b {
+    @include text-styling($text-family-secondary, 0, $text-color);
+    -webkit-text-stroke: .5px $text-color;
+}
+
+p {
+    @include text-styling($text-family-secondary, 0, $text-color);
+}
+
+// textarea {
+// 	// --border-color: var(--color-md-dark);
+// 	padding: 0.7em 1em;
+// 	// border: 2px solid var(--border-color);
+// 	border-radius: 0.5em;
+// 	font-size: 1em;
+
+// 	/* Add a transition */
+// 	transition: 200ms;
+
+// 	/* 
+// 		This removes the accessibility outline 
+// 		which should never be removed
+// 		https://a11yproject.com/posts/never-remove-css-outlines/
+// 	*/
+// 	// outline: none !important; 
+// }

@@ -1,21 +1,8 @@
 @import './variables';
+@import './text';
 
-
-* {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-
-}
-
-h1 {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 30px;
-}
-
-h1 {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 30px;
-}
+// Section for importing other people's CSS snippets
+@import './checkboxradio';
 
 .color-grid {
     display: grid;
@@ -55,9 +42,9 @@ h1 {
 	background-color: $color-bg-md2;
 }
 
-// .color-grid > div:nth-child(8) {
-// 	background-color: ;
-// }
+.color-grid > div:nth-child(8) {
+	background-color: $text-color;
+}
 
 // .color-grid > div:nth-child(9) {
 // 	background-color: ;
@@ -83,6 +70,30 @@ section {
     margin-top: 1em;
 }
 
+label {
+    display: block;
+    margin: 0 0 1em 0;
+  }
 
+button {
+	--weight: normal; 
 
+	/* Give the button a finger cursor */
+	cursor: pointer;
+	/* Style the button */
+	border-width: 2px;
+	border-style: solid;
+	border-color: transparent;
+	border-radius: 0.5em;
+	padding: 0.7em 1em; /* Use padding to give the text some space */
+	font-size: 1em;
 
+	/* Think about adding a transition */
+	transition: 200ms;
+
+	/* Use some variables to control the appearance */
+	font-weight: var(--weight);
+    background-color: var(--background-color, var(--color-primary));
+    // background-color: var(--background-color, var(--color-primary));
+	color: var(--color-light);
+}
