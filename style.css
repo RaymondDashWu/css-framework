@@ -1,0 +1,66 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 30px;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 30px;
+}
+
+.color-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.color-grid > div {
+  height: 100px;
+}
+
+.color-grid > div:nth-child(1) {
+  background-color: #f38181;
+}
+
+.color-grid > div:nth-child(2) {
+  background-color: #fce38a;
+}
+
+.color-grid > div:nth-child(3) {
+  background-color: #eaffd0;
+}
+
+.color-grid > div:nth-child(4) {
+  background-color: #95e1d3;
+}
+
+.color-grid > div:nth-child(5) {
+  background-color: #f4f4f4;
+}
+
+.color-grid > div:nth-child(6) {
+  background-color: #c4cacf;
+}
+
+.color-grid > div:nth-child(7) {
+  background-color: #AEAEA5;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+section {
+  border: 5px solid #AEAEA5;
+  padding: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+/*# sourceMappingURL=style.css.map */

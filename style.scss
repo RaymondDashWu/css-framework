@@ -1,0 +1,88 @@
+@import './variables';
+
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.color-grid > div {
+    height: 100px;
+}
+
+
+.color-grid > div:nth-child(1) {
+	background-color: $red;
+}
+
+.color-grid > div:nth-child(2) {
+	background-color: $yellow;
+}
+
+.color-grid > div:nth-child(3) {
+	background-color: $green;
+}
+
+.color-grid > div:nth-child(4) {
+	background-color: $teal;
+}
+
+.color-grid > div:nth-child(5) {
+	background-color: $color-bg;
+}
+
+.color-grid > div:nth-child(6) {
+	background-color: $color-bg-md;
+}
+
+.color-grid > div:nth-child(7) {
+	background-color: $color-bg-md2;
+}
+
+// .color-grid > div:nth-child(8) {
+// 	background-color: ;
+// }
+
+// .color-grid > div:nth-child(9) {
+// 	background-color: ;
+// }
+
+// .color-grid > div:nth-child(10) {
+// 	background-color: ;
+// }
+	
+// .color-grid > div:nth-child(11) {
+// 	background-color: ;
+// }
+	
+.container {
+	width: 90%;
+	margin: auto;
+}
+
+section {
+	border: 5px solid $color-bg-md2;
+	padding: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+
+
+
