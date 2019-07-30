@@ -1,0 +1,49 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: baseline;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: baseline;
+	}
+
+	a {
+		display: block;
+		padding: 0.25em 1em;
+		text-decoration: none;
+	}
+
+	a:link {
+
+	}
+
+	a:visited {
+
+	}
+
+	a:hover {
+		color: $color-bg-md;
+		filter: none;
+	}
+
+	a:active {
+		filter: none;
+	}
+
+	.title {
+		font-weight: normal;
+		font-weight: normal;
+		font-size: 1em;
+		letter-spacing: 0.15em;
+		margin-top: 1em;
+		margin-bottom: .5em;
+		padding: 0 1em;
+	}
+}

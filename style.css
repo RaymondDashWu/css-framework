@@ -3,6 +3,8 @@
   font-size: 15px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: default;
+  letter-spacing: default;
   background-color: #fdfdfd;
 }
 
@@ -11,6 +13,8 @@ h1 {
   font-size: 45px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: normal;
+  letter-spacing: 0.05em;
   margin-bottom: 2vh;
 }
 
@@ -19,6 +23,8 @@ h2 {
   font-size: 40px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: normal;
+  letter-spacing: 0.05em;
 }
 
 h3 {
@@ -26,6 +32,8 @@ h3 {
   font-size: 35px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: normal;
+  letter-spacing: 0.05em;
 }
 
 h4 {
@@ -33,6 +41,8 @@ h4 {
   font-size: 30px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: normal;
+  letter-spacing: 0.05em;
 }
 
 h5 {
@@ -40,6 +50,8 @@ h5 {
   font-size: 25px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: normal;
+  letter-spacing: 0.05em;
 }
 
 h6 {
@@ -47,6 +59,8 @@ h6 {
   font-size: 20px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: normal;
+  letter-spacing: 0.05em;
 }
 
 strong, b {
@@ -54,6 +68,8 @@ strong, b {
   font-size: 15px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: default;
+  letter-spacing: default;
   -webkit-text-stroke: 0.5px #323031;
 }
 
@@ -62,11 +78,76 @@ p {
   font-size: 15px;
   margin-bottom: 1vh;
   color: #323031;
+  font-weight: default;
+  letter-spacing: default;
+  line-height: 1.35em;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.navbar a {
+  display: block;
+  padding: 0.25em 1em;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #c4cacf;
+  -webkit-filter: none;
+          filter: none;
+}
+
+.navbar a:active {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.navbar .title {
+  font-weight: normal;
+  font-weight: normal;
+  font-size: 1em;
+  letter-spacing: 0.15em;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  padding: 0 1em;
 }
 
 .checkbox label:after,
 .radio label:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -76,11 +157,11 @@ p {
   position: relative;
   display: inline-block;
   border: 1px solid #a9a9a9;
-  border-radius: 0.25em;
+  border-radius: .25em;
   width: 1.3em;
   height: 1.3em;
   float: left;
-  margin-right: 0.5em;
+  margin-right: .5em;
 }
 
 .radio .cr {
@@ -90,7 +171,7 @@ p {
 .checkbox .cr .cr-icon,
 .radio .cr .cr-icon {
   position: absolute;
-  font-size: 0.8em;
+  font-size: .8em;
   line-height: 0;
   top: 50%;
   left: 20%;
@@ -100,32 +181,37 @@ p {
   margin-left: 0.04em;
 }
 
-.checkbox label input[type=checkbox],
-.radio label input[type=radio] {
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
   display: none;
 }
 
-.checkbox label input[type=checkbox] + .cr > .cr-icon,
-.radio label input[type=radio] + .cr > .cr-icon {
-  transform: scale(3) rotateZ(-20deg);
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+  -webkit-transform: scale(3) rotateZ(-20deg);
+          transform: scale(3) rotateZ(-20deg);
   opacity: 0;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
-.checkbox label input[type=checkbox]:checked + .cr > .cr-icon,
-.radio label input[type=radio]:checked + .cr > .cr-icon {
-  transform: scale(1) rotateZ(0deg);
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+  -webkit-transform: scale(1) rotateZ(0deg);
+          transform: scale(1) rotateZ(0deg);
   opacity: 1;
 }
 
-.checkbox label input[type=checkbox]:disabled + .cr,
-.radio label input[type=radio]:disabled + .cr {
-  opacity: 0.5;
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+  opacity: .5;
 }
 
 .color-grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 .color-grid > div {
@@ -194,11 +280,11 @@ button {
   /* Use padding to give the text some space */
   font-size: 1em;
   /* Think about adding a transition */
+  -webkit-transition: 200ms;
   transition: 200ms;
   /* Use some variables to control the appearance */
   font-weight: var(--weight);
   background-color: var(--background-color, var(--color-primary));
   color: var(--color-light);
 }
-
 /*# sourceMappingURL=style.css.map */

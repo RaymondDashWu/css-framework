@@ -2,50 +2,55 @@
 
 // Allows flexibility to choose font size and modifier to size.
 // In this case all fonts will be 15px + modifier
-@mixin text-styling($font, $size, $color) {
+
+@mixin text-styling($font, $size, $color, $font-weight, $letter-spacing) {
     font-family: $font;
     font-size: 15px + $size;
     margin-bottom: 1vh;
     color: $color;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
 }
 
 * {
-    @include text-styling($text-family-secondary, 0, $text-color);
+    @include text-styling($text-family-secondary, 0, $text-color, $default-font-weight, $default-line-spacing);
     background-color: $color-bg;
 }
 
 h1 {
-    @include text-styling($text-family-primary, 30, $text-color);
+    @include text-styling($text-family-primary, 30, $text-color, $heading-font-weight, $heading-line-spacing);
     margin-bottom: 2vh;
+    // font-weight: normal;
 }
 
 h2 {
-    @include text-styling($text-family-primary, 25, $text-color);
+    @include text-styling($text-family-primary, 25, $text-color, $heading-font-weight, $heading-line-spacing);
 }
 
 h3 {
-    @include text-styling($text-family-primary, 20, $text-color);
+    @include text-styling($text-family-primary, 20, $text-color, $heading-font-weight, $heading-line-spacing);
 }
 
 h4 {
-    @include text-styling($text-family-primary, 15, $text-color);
+    @include text-styling($text-family-primary, 15, $text-color, $heading-font-weight, $heading-line-spacing);
 }
 
 h5 {
-    @include text-styling($text-family-primary, 10, $text-color);
+    @include text-styling($text-family-primary, 10, $text-color, $heading-font-weight, $heading-line-spacing);
 }
 
 h6 {
-    @include text-styling($text-family-primary, 5, $text-color);
+    @include text-styling($text-family-primary, 5, $text-color, $heading-font-weight, $heading-line-spacing);
 }
 
 strong, b {
-    @include text-styling($text-family-secondary, 0, $text-color);
+    @include text-styling($text-family-secondary, 0, $text-color, $default-font-weight, $default-line-spacing);
     -webkit-text-stroke: .5px $text-color;
 }
 
 p {
-    @include text-styling($text-family-secondary, 0, $text-color);
+    @include text-styling($text-family-secondary, 0, $text-color, $default-font-weight, $default-line-spacing);
+    line-height: 1.35em;
 }
 
 // textarea {
