@@ -1,3 +1,9 @@
+// TAKE NOTES HERE
+
+// - remove underline on links in navbar. text-decoration: none. 
+// - If you really like the underline try border-bottom. you can use padding-bottom to control the space between the underline and the text
+// - Give the links in the navbar a hover style 
+
 @import './variables';
 @import './text';
 @import './navbar';
@@ -16,35 +22,35 @@
 
 
 .color-grid > div:nth-child(1) {
-	background-color: $red;
+	background-color: map-get($colors, red);
 }
 
 .color-grid > div:nth-child(2) {
-	background-color: $yellow;
+	background-color: map-get($colors, yellow);
 }
 
 .color-grid > div:nth-child(3) {
-	background-color: $green;
+	background-color: map-get($colors, green);
 }
 
 .color-grid > div:nth-child(4) {
-	background-color: $teal;
+	background-color: map-get($colors, teal);
 }
 
 .color-grid > div:nth-child(5) {
-	background-color: $color-bg;
+	background-color: map-get($background-colors, bg);
 }
 
 .color-grid > div:nth-child(6) {
-	background-color: $color-bg-md;
+	background-color: map-get($background-colors, bg-md);
 }
 
 .color-grid > div:nth-child(7) {
-	background-color: $color-bg-md2;
+	background-color: map-get($background-colors, bg-md2);
 }
 
 .color-grid > div:nth-child(8) {
-	background-color: $text-color;
+	background-color: map-get($text, text-color);
 }
 
 // .color-grid > div:nth-child(9) {
@@ -65,7 +71,7 @@
 }
 
 section {
-	border: 5px solid $color-bg-md2;
+	border: 5px solid map-get($colors, bg-md2);
 	padding: 1em;
     margin-bottom: 1em;
     margin-top: 1em;
@@ -97,4 +103,52 @@ button {
     background-color: var(--background-color, var(--color-primary));
     // background-color: var(--background-color, var(--color-primary));
 	color: var(--color-light);
+}
+
+/* Page Footer */
+
+.page-footer {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+	display: flex;
+	justify-content: center
+}
+
+.page-footer h1, 
+.page-footer h2, 
+.page-footer h3, 
+.page-footer h4, 
+.page-footer h5, 
+.page-footer h6 {
+	color: var(--color-light);
+}
+
+.page-footer > ul {
+	margin: 0;
+	padding: 0;
+	padding: 2em;
+	list-style-type: none;
+}
+
+.page-footer a {
+	color: var(--color-info);
+	filter: none;
+}
+
+.page-footer a:link {
+	color: var(--color-background);
+	filter: none;
+}
+
+.page-footer a:visited {
+	
+}
+
+.page-footer a:hover {
+	color: var(--color-light);
+	filter: none;
+}
+
+.page-footer a:active {
+	
 }

@@ -1,45 +1,49 @@
 // This stores all the variables that will be used in stylesheets
 
 // Basic color palette
-$red: #DC3F3E;
-$yellow: #E7C643;
-$green: #53C16E;
-$teal: #95e1d3;
+$colors: (
+    red: #DC3F3E,
+    yellow: #E7C643,
+    green: #53C16E,
+    teal: #95e1d3,
+);
+
 
 // Background color palette
-$color-bg: #fdfdfd;
-$color-bg-md: #c4cacf;
-$color-bg-md2: #AEAEA5;
+$background-colors: (
+    bg: #fdfdfd,
+    bg-md: #c4cacf,
+    bg-md2: #AEAEA5,
+    primary: map-get($colors, teal),
+    secondary: map-get($colors, green),
+);
 
-$color-primary: $teal;
-$color-secondary: $green;
+$text: (
+    text-family-primary: 'Abril Fatface'#{','} cursive,
+    text-family-secondary: 'Open Sans'#{','} sans-serif,
+    text-color: #323031,
 
-// Text 
-$text-family-primary: 'Abril Fatface', cursive;;
-$text-family-secondary: 'Open Sans', sans-serif;;
-$text-color: #323031;
+    default-font-weight: default,
+    heading-font-weight: normal,
 
-$default-font-weight: default;
-$heading-font-weight: normal;
+    default-line-spacing: default,
+    heading-line-spacing: .02em,
+);
 
-$default-line-spacing: default;
-$heading-line-spacing: .05em;
+// Creating CSS variables for each category. 
+// Note: Not used in Sass but primarily for the option to play with things.
+// Ex: Use to style two button classes inline without having to create separate classes
 
-// $colors: ("red":$red, ""#E7C643, #53C16E, #95e1d3);
-
-// :root {
-//     @each $name, $val in $colors {
-//         --color-#{$name}: $val;
-//     }
-
-
-
-//     --color-red: #DC3F3E;
-//     --color-red: $yellow;
-//     --color3
-//     --color-4
-//     --color-5
-//     --color-6
-//     --color-7
-//     --color-8
-// }
+// <button style="--background-color: var(--color-red);">Red Button</button>
+// <button style="--background-color: var(--color-green);">Green Button</button>
+:root {
+    @each $name, $val in $colors {
+        --color-#{$name}: #{$val};
+    }
+    @each $name, $val in $background-colors {
+        --color-#{$name}: #{$val};
+    }
+    @each $name, $val in $text {
+        --#{$name}: #{$val};
+    }
+}

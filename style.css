@@ -1,5 +1,24 @@
-* {
-  font-family: "Open Sans", sans-serif;
+:root {
+  --color-red: #DC3F3E;
+  --color-yellow: #E7C643;
+  --color-green: #53C16E;
+  --color-teal: #95e1d3;
+  --color-bg: #fdfdfd;
+  --color-bg-md: #c4cacf;
+  --color-bg-md2: #AEAEA5;
+  --color-primary: #95e1d3;
+  --color-secondary: #53C16E;
+  --text-family-primary: Abril Fatface , cursive;
+  --text-family-secondary: Open Sans , sans-serif;
+  --text-color: #323031;
+  --default-font-weight: default;
+  --heading-font-weight: normal;
+  --default-line-spacing: default;
+  --heading-line-spacing: 0.02em;
+}
+
+body {
+  font-family: "Open Sans" , sans-serif;
   font-size: 15px;
   margin-bottom: 1vh;
   color: #323031;
@@ -9,72 +28,72 @@
 }
 
 h1 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface" , cursive;
   font-size: 45px;
   margin-bottom: 1vh;
   color: #323031;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   margin-bottom: 2vh;
 }
 
 h2 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface" , cursive;
   font-size: 40px;
   margin-bottom: 1vh;
   color: #323031;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 h3 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface" , cursive;
   font-size: 35px;
   margin-bottom: 1vh;
   color: #323031;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 h4 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface" , cursive;
   font-size: 30px;
   margin-bottom: 1vh;
   color: #323031;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 h5 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface" , cursive;
   font-size: 25px;
   margin-bottom: 1vh;
   color: #323031;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 h6 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Abril Fatface" , cursive;
   font-size: 20px;
   margin-bottom: 1vh;
   color: #323031;
   font-weight: normal;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 strong, b {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans" , sans-serif;
   font-size: 15px;
   margin-bottom: 1vh;
   color: #323031;
   font-weight: default;
   letter-spacing: default;
-  -webkit-text-stroke: 0.5px #323031;
+  -webkit-text-stroke: 1px #323031;
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans" , sans-serif;
   font-size: 15px;
   margin-bottom: 1vh;
   color: #323031;
@@ -84,70 +103,45 @@ p {
 }
 
 .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: baseline;
 }
-
 .navbar ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
 }
-
 .navbar a {
   display: block;
   padding: 0.25em 1em;
   text-decoration: none;
 }
-
 .navbar a:hover {
   color: #c4cacf;
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
-
 .navbar a:active {
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
-
 .navbar .title {
   font-weight: normal;
   font-weight: normal;
   font-size: 1em;
   letter-spacing: 0.15em;
   margin-top: 1em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   padding: 0 1em;
 }
 
 .checkbox label:after,
 .radio label:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -157,11 +151,11 @@ p {
   position: relative;
   display: inline-block;
   border: 1px solid #a9a9a9;
-  border-radius: .25em;
-  width: 1.3em;
-  height: 1.3em;
+  border-radius: 0.15em;
+  width: 0.5em;
+  height: 0.5em;
   float: left;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
 .radio .cr {
@@ -171,47 +165,41 @@ p {
 .checkbox .cr .cr-icon,
 .radio .cr .cr-icon {
   position: absolute;
-  font-size: .8em;
+  font-size: 0.5em;
   line-height: 0;
   top: 50%;
-  left: 20%;
 }
 
 .radio .cr .cr-icon {
   margin-left: 0.04em;
 }
 
-.checkbox label input[type="checkbox"],
-.radio label input[type="radio"] {
+.checkbox label input[type=checkbox],
+.radio label input[type=radio] {
   display: none;
 }
 
-.checkbox label input[type="checkbox"] + .cr > .cr-icon,
-.radio label input[type="radio"] + .cr > .cr-icon {
-  -webkit-transform: scale(3) rotateZ(-20deg);
-          transform: scale(3) rotateZ(-20deg);
+.checkbox label input[type=checkbox] + .cr > .cr-icon,
+.radio label input[type=radio] + .cr > .cr-icon {
+  transform: scale(3) rotateZ(-20deg);
   opacity: 0;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
-.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
-.radio label input[type="radio"]:checked + .cr > .cr-icon {
-  -webkit-transform: scale(1) rotateZ(0deg);
-          transform: scale(1) rotateZ(0deg);
+.checkbox label input[type=checkbox]:checked + .cr > .cr-icon,
+.radio label input[type=radio]:checked + .cr > .cr-icon {
+  transform: scale(1) rotateZ(0deg);
   opacity: 1;
 }
 
-.checkbox label input[type="checkbox"]:disabled + .cr,
-.radio label input[type="radio"]:disabled + .cr {
-  opacity: .5;
+.checkbox label input[type=checkbox]:disabled + .cr,
+.radio label input[type=radio]:disabled + .cr {
+  opacity: 0.5;
 }
 
 .color-grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .color-grid > div {
@@ -256,7 +244,7 @@ p {
 }
 
 section {
-  border: 5px solid #AEAEA5;
+  border: 5px solid;
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -280,11 +268,50 @@ button {
   /* Use padding to give the text some space */
   font-size: 1em;
   /* Think about adding a transition */
-  -webkit-transition: 200ms;
   transition: 200ms;
   /* Use some variables to control the appearance */
   font-weight: var(--weight);
   background-color: var(--background-color, var(--color-primary));
   color: var(--color-light);
 }
+
+/* Page Footer */
+.page-footer {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer h1,
+.page-footer h2,
+.page-footer h3,
+.page-footer h4,
+.page-footer h5,
+.page-footer h6 {
+  color: var(--color-light);
+}
+
+.page-footer > ul {
+  margin: 0;
+  padding: 0;
+  padding: 2em;
+  list-style-type: none;
+}
+
+.page-footer a {
+  color: var(--color-info);
+  filter: none;
+}
+
+.page-footer a:link {
+  color: var(--color-background);
+  filter: none;
+}
+
+.page-footer a:hover {
+  color: var(--color-light);
+  filter: none;
+}
+
 /*# sourceMappingURL=style.css.map */

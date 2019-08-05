@@ -1,5 +1,6 @@
 <html>
 <!-- TODO In readme: Put requirements for how to install-->
+
 <head>
     <title>TITLE WIP*** example</title>
     <link rel="stylesheet" href="reset.css">
@@ -11,7 +12,9 @@
 <body>
     <div class="navbar">
         <ul>
-            <li><h1 class="title">TITLE</h1></li>
+            <li>
+                <h1 class="title">TITLE</h1>
+            </li>
             <li><a href="#">Link 1</a></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
@@ -51,8 +54,17 @@
             <h1>Paragraph styles</h1>
             <p>This is an <strong>average</strong> paragraph. It includes some <em>inline</em> elements such as
                 &lt;strong&gt; and &lt;em&gt;.
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
 
                 </p>
 
@@ -65,9 +77,9 @@
             <button>Submit</button>
 
             <p>This button has consequences. You might want to think twice before clicking.</p>
-            <button style="--weight: bold; --background-color: #f85353;">Delete</button>
+            <button style="--weight: bold; --background-color: var(--color-red);">Delete</button>
 
-            <button style="--background-color: #6bc253;">Go!</button>
+            <button style="--background-color: var(--color-green);">Go!</button>
         </section>
 
         <section>
@@ -98,7 +110,7 @@
                     <span>Your comments</span>
                     <textarea placeholder="Your comment"></textarea>
                 </label>
-                
+
                 <!-- Switch with Click -->
                 <div class="checkbox">
                     <label style="font-size: 2.5em">
@@ -106,13 +118,112 @@
                         <span class="cr"><i class="cr-icon fa fa-check"></i></span>
                     </label>
                 </div>
-                
+
                 <!-- <label class="control-checkbox">One
                     <input type="checkbox" checked="checked">
                     <span></span>
                 </label> -->
             </form>
         </section>
+        <section>
+            TODO Alert https://github.com/Make-School-Courses/FEW-2.2-Web-Design-And-Advanced-CSS/blob/master/Assignments/assignment-08-components.md
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert alert-secondary" role="alert">
+                A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert alert-success" role="alert">
+                A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert alert-danger" role="alert">
+                A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert alert-warning" role="alert">
+                A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert alert-info" role="alert">
+                A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert alert-light" role="alert">
+                A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert alert-dark" role="alert">
+                A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+        </section>
+        <section>
+            TODO Button Group
+        </section>
+
+        <section>
+            TODO Card
+        </section>
+
+        <section>
+            TODO TABLE
+        </section>
+
+        <section id="footers">
+            TODO Footer
+            <h2>Page Footer</h2>
+            <div class="page-footer">
+                <ul>
+                    <li>
+                        <h3>Column 1</h3>
+                    </li>
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li><a>Item 3</a></li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h3>Column 2</h3>
+                    </li>
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li><a>Item 3</a></li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h3>Column 3</h3>
+                    </li>
+                    <li><a>Item 1</a></li>
+                    <li><a>Item 2</a></li>
+                    <li><a>Item 3</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div class="page-footer">
+        <ul>
+            <li>
+                <h3>Content</h3>
+            </li>
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#navbar">Navbar</a></li>
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#type">Type</a></li>
+            <li><a href="#forms">forms</a></li>
+        </ul>
+
+        <ul>
+            <li>
+                <h3>Resources</h3>
+            </li>
+            <li><a href="">CSS Tricks</a></li>
+            <li><a href="">CSS Tricks</a></li>
+        </ul>
+
+        <ul>
+            <li>
+                <h3>Contact</h3>
+            </li>
+            <li><a href="https://github.com/soggybag/frmwrk-css">GitHub</a></li>
+        </ul>
+    </div>
 
     </div>
 </body>

@@ -12,44 +12,43 @@
     letter-spacing: $letter-spacing;
 }
 
-* {
-    @include text-styling($text-family-secondary, 0, $text-color, $default-font-weight, $default-line-spacing);
-    background-color: $color-bg;
+body {
+    @include text-styling(map-get($text, text-family-secondary), 0, map-get($text, text-color), map-get($text, default-font-weight), map-get($text, default-line-spacing));
+    background-color: map-get($background-colors, bg);
 }
 
 h1 {
-    @include text-styling($text-family-primary, 30, $text-color, $heading-font-weight, $heading-line-spacing);
+    @include text-styling(map-get($text, text-family-primary), 30, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
     margin-bottom: 2vh;
-    // font-weight: normal;
 }
 
 h2 {
-    @include text-styling($text-family-primary, 25, $text-color, $heading-font-weight, $heading-line-spacing);
+    @include text-styling(map-get($text, text-family-primary), 25, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h3 {
-    @include text-styling($text-family-primary, 20, $text-color, $heading-font-weight, $heading-line-spacing);
+    @include text-styling(map-get($text, text-family-primary), 20, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h4 {
-    @include text-styling($text-family-primary, 15, $text-color, $heading-font-weight, $heading-line-spacing);
+    @include text-styling(map-get($text, text-family-primary), 15, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h5 {
-    @include text-styling($text-family-primary, 10, $text-color, $heading-font-weight, $heading-line-spacing);
+    @include text-styling(map-get($text, text-family-primary), 10, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h6 {
-    @include text-styling($text-family-primary, 5, $text-color, $heading-font-weight, $heading-line-spacing);
+    @include text-styling(map-get($text, text-family-primary), 5, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 strong, b {
-    @include text-styling($text-family-secondary, 0, $text-color, $default-font-weight, $default-line-spacing);
-    -webkit-text-stroke: .5px $text-color;
+    @include text-styling(map-get($text, text-family-secondary), 0, map-get($text, text-color), map-get($text, default-font-weight), map-get($text, default-line-spacing));
+    -webkit-text-stroke: 1px map-get($text, text-color);
 }
 
 p {
-    @include text-styling($text-family-secondary, 0, $text-color, $default-font-weight, $default-line-spacing);
+    @include text-styling(map-get($text, text-family-secondary), 0, map-get($text, text-color), map-get($text, default-font-weight), map-get($text, default-line-spacing));
     line-height: 1.35em;
 }
 
