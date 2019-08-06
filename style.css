@@ -3,7 +3,7 @@
   --color-yellow: #E7C643;
   --color-green: #53C16E;
   --color-teal: #95e1d3;
-  --color-bg: #fdfdfd;
+  --color-bg: #f5f4f4;
   --color-bg-md: #c4cacf;
   --color-bg-md2: #AEAEA5;
   --color-primary: #95e1d3;
@@ -24,7 +24,7 @@ body {
   color: #323031;
   font-weight: default;
   letter-spacing: default;
-  background-color: #fdfdfd;
+  background-color: #f5f4f4;
 }
 
 h1 {
@@ -223,7 +223,7 @@ p {
 }
 
 .color-grid > div:nth-child(5) {
-  background-color: #fdfdfd;
+  background-color: #f5f4f4;
 }
 
 .color-grid > div:nth-child(6) {
@@ -244,7 +244,7 @@ p {
 }
 
 section {
-  border: 5px solid;
+  border: 5px solid #AEAEA5;
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -312,6 +312,41 @@ button {
 .page-footer a:hover {
   color: var(--color-light);
   filter: none;
+}
+
+.alert alert-primary {
+  background-color: #AEAEA5;
+}
+.alert alert-dark {
+  background-color: #AEAEA5;
+}
+
+span.navbar-badge {
+  color: #DC3F3E;
+  border-radius: 2px;
+  margin-left: 4px;
+}
+
+.button-group {
+  margin-right: 2px;
+  margin-bottom: 1px;
+  flex: 0 0 auto;
+}
+
+.secondary.button {
+  background-color: #AEAEA5;
+}
+
+.success.button {
+  background-color: #53C16E;
+}
+
+.warning.button {
+  background-color: #E7C643;
+}
+
+.alert.button {
+  background-color: #DC3F3E;
 }
 
 /*# sourceMappingURL=style.css.map */

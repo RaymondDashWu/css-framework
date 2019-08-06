@@ -71,7 +71,7 @@
 }
 
 section {
-	border: 5px solid map-get($colors, bg-md2);
+	border: 5px solid map-get($background-colors, bg-md2);
 	padding: 1em;
     margin-bottom: 1em;
     margin-top: 1em;
@@ -151,4 +151,84 @@ button {
 
 .page-footer a:active {
 	
+}
+
+@mixin alert-variant($background, $border, $color) {
+	color: $color;
+	@include gradient-bg($background);
+	border-color: $border;
+  
+	hr {
+	  border-top-color: darken($border, 5%);
+	}
+  
+	.alert-link {
+	  color: darken($color, 10%);
+	}
+  }
+
+.alert {
+	
+	alert-primary {
+		background-color: map-get($background-colors, bg-md2);
+	}
+
+	alert-secondary {
+
+	}
+
+	alert-success {
+
+	}
+
+	alert-danger {
+		
+	}
+
+	alert-warning {
+		
+	}
+
+	alert-info {
+		
+	}
+
+	alert-light {
+		
+	}
+
+	alert-dark {
+		background-color: map-get($background-colors, bg-md2);
+	}
+
+}
+
+span.navbar-badge {
+	color: map-get($colors, red);
+	border-radius: 2px;
+	margin-left: 4px;
+}
+
+.button-group {
+	margin-right: 2px;
+	margin-bottom: 1px;
+	flex: 0 0 auto;
+	
+}
+
+.secondary.button {
+	background-color: map-get($background-colors, bg-md2);
+}
+
+.success.button {
+	background-color: map-get($colors, green);
+}
+
+.warning.button {
+	background-color: map-get($colors, yellow);
+
+}
+
+.alert.button {
+	background-color: map-get($colors, red);
 }
