@@ -232,3 +232,14 @@ span.navbar-badge {
 .alert.button {
 	background-color: map-get($colors, red);
 }
+
+thead, th, td, tfoot {
+	padding: 0.5rem 0.625rem 0.625rem;
+    font-weight: bold;
+	text-align: left;
+	margin-bottom: 2vh;
+}
+
+thead, tr:nth-child(even) {
+	background-color: map-get($background-colors, bg-md);
+}
