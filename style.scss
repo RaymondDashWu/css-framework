@@ -105,7 +105,9 @@ button {
 	color: var(--color-light);
 }
 
-/* Page Footer */
+// ╔═════════════════════════════════════════════════════════╗
+// 					Footer
+// ╚═════════════════════════════════════════════════════════╝
 
 .page-footer {
 	background-color: var(--color-foreground);
@@ -152,6 +154,10 @@ button {
 .page-footer a:active {
 	
 }
+
+// ╔═════════════════════════════════════════════════════════╗
+// 					Alerts
+// ╚═════════════════════════════════════════════════════════╝
 
 @mixin alert-variant($background, $border, $color) {
 	color: $color;
@@ -203,6 +209,10 @@ button {
 
 }
 
+// ╔═════════════════════════════════════════════════════════╗
+// 					Badges, Notifications
+// ╚═════════════════════════════════════════════════════════╝
+
 span.navbar-badge {
 	color: map-get($colors, red);
 	border-radius: 2px;
@@ -215,6 +225,10 @@ span.navbar-badge {
 	flex: 0 0 auto;
 	
 }
+
+// ╔═════════════════════════════════════════════════════════╗
+// 					Buttons
+// ╚═════════════════════════════════════════════════════════╝
 
 .secondary.button {
 	background-color: map-get($background-colors, bg-md2);
@@ -233,6 +247,10 @@ span.navbar-badge {
 	background-color: map-get($colors, red);
 }
 
+// ╔═════════════════════════════════════════════════════════╗
+// 					Tables
+// ╚═════════════════════════════════════════════════════════╝
+
 thead, th, td, tfoot {
 	padding: 0.5rem 0.625rem 0.625rem;
     font-weight: bold;
@@ -242,4 +260,28 @@ thead, th, td, tfoot {
 
 thead, tr:nth-child(even) {
 	background-color: map-get($background-colors, bg-md);
+}
+
+// ╔═════════════════════════════════════════════════════════╗
+// 					Inputs, Forms, Text areas
+// ╚═════════════════════════════════════════════════════════╝
+
+label > span {
+	display: block;
+}
+			
+input, textarea {
+	display: block;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid map-get($background-colors, bg-md);
+	height: 2rem;
+	width: 100%;
+	padding: 10px;
+}
+	
+.helper-text {
+	display: block;
+	position: relative;
+	@include text-styling(map-get($text, text-family-secondary), -5, 0, map-get($background-colors, bg-md2), map-get($text, default-font-weight), map-get($text, default-line-spacing));
 }

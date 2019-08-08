@@ -19,27 +19,27 @@ body {
 }
 
 h1 {
-    @include text-styling(map-get($text, text-family-primary), 30, 3, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
+    @include text-styling(map-get($text, text-family-primary), 30, 2, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h2 {
-    @include text-styling(map-get($text, text-family-primary), 25, 3, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
+    @include text-styling(map-get($text, text-family-primary), 25, 2, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h3 {
-    @include text-styling(map-get($text, text-family-primary), 20, 3, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
+    @include text-styling(map-get($text, text-family-primary), 20, 2, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h4 {
-    @include text-styling(map-get($text, text-family-primary), 15, 3, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
+    @include text-styling(map-get($text, text-family-primary), 15, 2, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h5 {
-    @include text-styling(map-get($text, text-family-primary), 10, 3, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
+    @include text-styling(map-get($text, text-family-primary), 10, 2, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 h6 {
-    @include text-styling(map-get($text, text-family-primary), 5, 3, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
+    @include text-styling(map-get($text, text-family-primary), 5, 2, map-get($text, text-color), map-get($text, heading-font-weight), map-get($text, heading-line-spacing));
 }
 
 strong, b {
