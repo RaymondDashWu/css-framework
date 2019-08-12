@@ -12,59 +12,58 @@
 @import './checkboxradio';
 
 .color-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 
-.color-grid > div {
-    height: 100px;
+.color-grid>div {
+	height: 100px;
 }
 
-
-.color-grid > div:nth-child(1) {
+.color-grid>div:nth-child(1) {
 	background-color: map-get($colors, red);
 }
 
-.color-grid > div:nth-child(2) {
+.color-grid>div:nth-child(2) {
 	background-color: map-get($colors, yellow);
 }
 
-.color-grid > div:nth-child(3) {
+.color-grid>div:nth-child(3) {
 	background-color: map-get($colors, green);
 }
 
-.color-grid > div:nth-child(4) {
+.color-grid>div:nth-child(4) {
 	background-color: map-get($colors, teal);
 }
 
-.color-grid > div:nth-child(5) {
+.color-grid>div:nth-child(5) {
 	background-color: map-get($background-colors, bg);
 }
 
-.color-grid > div:nth-child(6) {
+.color-grid>div:nth-child(6) {
 	background-color: map-get($background-colors, bg-md);
 }
 
-.color-grid > div:nth-child(7) {
+.color-grid>div:nth-child(7) {
 	background-color: map-get($background-colors, bg-md2);
 }
 
-.color-grid > div:nth-child(8) {
+.color-grid>div:nth-child(8) {
 	background-color: map-get($text, text-color);
 }
 
-// .color-grid > div:nth-child(9) {
-// 	background-color: ;
-// }
+.color-grid > div:nth-child(9) {
+	background-color: map-get($colors, blue);
+}
 
-// .color-grid > div:nth-child(10) {
-// 	background-color: ;
-// }
-	
+.color-grid > div:nth-child(10) {
+	background-color: map-get($colors, orange);
+}
+
 // .color-grid > div:nth-child(11) {
 // 	background-color: ;
 // }
-	
+
 .container {
 	width: 90%;
 	margin: auto;
@@ -73,17 +72,17 @@
 section {
 	border: 5px solid map-get($background-colors, bg-md2);
 	padding: 1em;
-    margin-bottom: 1em;
-    margin-top: 1em;
+	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 label {
-    display: block;
-    margin: 0 0 1em 0;
-  }
+	display: block;
+	margin: 0 0 1em 0;
+}
 
 button {
-	--weight: normal; 
+	--weight: normal;
 
 	/* Give the button a finger cursor */
 	cursor: pointer;
@@ -92,7 +91,8 @@ button {
 	border-style: solid;
 	border-color: transparent;
 	border-radius: 0.5em;
-	padding: 0.7em 1em; /* Use padding to give the text some space */
+	padding: 0.7em 1em;
+	/* Use padding to give the text some space */
 	font-size: 1em;
 
 	/* Think about adding a transition */
@@ -100,8 +100,8 @@ button {
 
 	/* Use some variables to control the appearance */
 	font-weight: var(--weight);
-    background-color: var(--background-color, var(--color-primary));
-    // background-color: var(--background-color, var(--color-primary));
+	background-color: var(--background-color, var(--color-primary));
+	// background-color: var(--background-color, var(--color-primary));
 	color: var(--color-light);
 }
 
@@ -116,16 +116,16 @@ button {
 	justify-content: center
 }
 
-.page-footer h1, 
-.page-footer h2, 
-.page-footer h3, 
-.page-footer h4, 
-.page-footer h5, 
+.page-footer h1,
+.page-footer h2,
+.page-footer h3,
+.page-footer h4,
+.page-footer h5,
 .page-footer h6 {
 	color: var(--color-light);
 }
 
-.page-footer > ul {
+.page-footer>ul {
 	margin: 0;
 	padding: 0;
 	padding: 2em;
@@ -142,71 +142,44 @@ button {
 	filter: none;
 }
 
-.page-footer a:visited {
-	
-}
+.page-footer a:visited {}
 
 .page-footer a:hover {
 	color: var(--color-light);
 	filter: none;
 }
 
-.page-footer a:active {
-	
-}
+.page-footer a:active {}
 
 // ╔═════════════════════════════════════════════════════════╗
 // 					Alerts
 // ╚═════════════════════════════════════════════════════════╝
 
-@mixin alert-variant($background, $border, $color) {
-	color: $color;
-	@include gradient-bg($background);
-	border-color: $border;
-  
-	hr {
-	  border-top-color: darken($border, 5%);
+@mixin alert-variant($background) {
+	background-color: $background;
+	padding: .75rem 1.25rem;
+	border: 1px solid transparent;
+	border-radius: .3rem;
+	margin: 1rem;
+}
+
+$names: (primary: map-get($colors, blue), 
+		secondary: map-get($colors, orange), 
+		success: map-get($colors, green), 
+		danger: map-get($colors, red), 
+		warning: map-get($colors, yellow), 
+		info: map-get($colors, teal), 
+		light: map-get($background-colors, bg-md), 
+		dark: map-get($background-colors, bg-md2));
+
+@each $name, $color in $names {
+	.alert-#{$name} {
+		background-color: $color;
+		padding: .75rem 1.25rem;
+		border: 1px solid transparent;
+		border-radius: .3rem;
+		margin-bottom: 1rem;
 	}
-  
-	.alert-link {
-	  color: darken($color, 10%);
-	}
-  }
-
-.alert {
-	
-	alert-primary {
-		background-color: map-get($background-colors, bg-md2);
-	}
-
-	alert-secondary {
-
-	}
-
-	alert-success {
-
-	}
-
-	alert-danger {
-		
-	}
-
-	alert-warning {
-		
-	}
-
-	alert-info {
-		
-	}
-
-	alert-light {
-		
-	}
-
-	alert-dark {
-		background-color: map-get($background-colors, bg-md2);
-	}
-
 }
 
 // ╔═════════════════════════════════════════════════════════╗
@@ -223,7 +196,7 @@ span.navbar-badge {
 	margin-right: 2px;
 	margin-bottom: 1px;
 	flex: 0 0 auto;
-	
+
 }
 
 // ╔═════════════════════════════════════════════════════════╗
@@ -251,14 +224,18 @@ span.navbar-badge {
 // 					Tables
 // ╚═════════════════════════════════════════════════════════╝
 
-thead, th, td, tfoot {
+thead,
+th,
+td,
+tfoot {
 	padding: 0.5rem 0.625rem 0.625rem;
-    font-weight: bold;
+	font-weight: bold;
 	text-align: left;
 	margin-bottom: 2vh;
 }
 
-thead, tr:nth-child(even) {
+thead,
+tr:nth-child(even) {
 	background-color: map-get($background-colors, bg-md);
 }
 
@@ -266,11 +243,12 @@ thead, tr:nth-child(even) {
 // 					Inputs, Forms, Text areas
 // ╚═════════════════════════════════════════════════════════╝
 
-label > span {
+label>span {
 	display: block;
 }
-			
-input, textarea {
+
+input,
+textarea {
 	display: block;
 	background-color: transparent;
 	border: none;
@@ -279,9 +257,50 @@ input, textarea {
 	width: 100%;
 	padding: 10px;
 }
-	
+
 .helper-text {
 	display: block;
 	position: relative;
 	@include text-styling(map-get($text, text-family-secondary), -5, 0, map-get($background-colors, bg-md2), map-get($text, default-font-weight), map-get($text, default-line-spacing));
+}
+
+// ╔═════════════════════════════════════════════════════════╗
+// 					Cards
+// ╚═════════════════════════════════════════════════════════╝
+
+.card {
+	width: 25%;
+	display: block;
+	position: relative;
+	margin: .5rem 0 1 rem 0;
+	border-radius: 2px;
+	border: 1px solid rgba(160, 160, 160, 0.2);
+}
+
+.card-content {
+	padding: 24px;
+
+}
+
+.card-title {
+	position: absolute;
+	padding: 24px;
+}
+
+.card-image>img {
+	width: 50%;
+}
+
+.card-title {
+	// position: absolute;
+	// padding: 24px;
+}
+
+.card-action:last-child {
+	border-radius: 0 0 2px 2px;
+	border-top: 1px solid rgba(160, 160, 160, 0.2);
+}
+
+.social_links {
+	font-size: 30px;
 }
