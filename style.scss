@@ -20,6 +20,8 @@
 	height: 100px;
 }
 
+// Color palette for demo page. DELETE in production
+
 .color-grid>div:nth-child(1) {
 	background-color: map-get($colors, red);
 }
@@ -279,21 +281,25 @@ textarea {
 
 .card-content {
 	padding: 24px;
+}
 
+
+
+.card-image>img {
+	width: 100%;
+}
+
+.card-image {
+	position: relative;
 }
 
 .card-title {
 	position: absolute;
-	padding: 24px;
-}
-
-.card-image>img {
-	width: 50%;
-}
-
-.card-title {
-	// position: absolute;
-	// padding: 24px;
+	left: 0;
+	bottom: 0;
+	padding: 12px;
+	color: map-get($background-colors, bg);
+	font-size: 24px;
 }
 
 .card-action:last-child {

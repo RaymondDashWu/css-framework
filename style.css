@@ -468,13 +468,21 @@ textarea {
   padding: 24px;
 }
 
-.card-title {
-  position: absolute;
-  padding: 24px;
+.card-image > img {
+  width: 100%;
 }
 
-.card-image > img {
-  width: 50%;
+.card-image {
+  position: relative;
+}
+
+.card-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 12px;
+  color: #f5f4f4;
+  font-size: 24px;
 }
 
 .card-action:last-child {
